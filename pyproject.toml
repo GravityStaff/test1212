@@ -4,10 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "log-trigger"
-version = "0.1.0"
+version = "0.2.1"
+description = "Watch logs and run stuff on regex match"
+authors = [{name = "Dev", email = "dev@example.local"}]
+requires-python = ">=3.9"
 dependencies = [
     "click>=8.0",
     "pyyaml>=6.0",
+    "watchfiles>=0.20.0",
 ]
 
 [project.scripts]
