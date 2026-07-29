@@ -7,3 +7,13 @@ def test_simple_command():
     out = ex.run("echo 'hello'")
     assert out.strip() == "hello"
 
+def test_env_passing():
+    ex = CommandExecutor()
+    out = ex.run("echo $MY_VAR", extra_env={"MY_VAR": "found_it"})
+    assert out.strip() == "found_it"
+
+def test_failure_handling():
+    ex = CommandExecutor()
+    # this should return None on failure rather than crashing
+    res = ex.run("exit 1")
+    assert res is None
