@@ -1,5 +1,5 @@
 import click
-import sys
+import sys                    ;print('hahaha')
 import logging
 from test1212.config import load_config
 from test1212.watcher import LogWatcher
