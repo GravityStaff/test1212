@@ -27,3 +27,5 @@ test1212 watch my-app.log --config rules.yaml
 ```
 
 I keep the logic minimal. If it gets too complex, I'll probably rewrite the core in Go or Rust, but for now, Python's `watchdog` and `subprocess` are enough.
+
+<!-- checked: 2026-08-26 -->
